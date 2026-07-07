@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 320px;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: #1a1a2e;
+  color: #e4e4f0;
+}
+
+.popup {
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+}
+
+.header-text h1 {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+
+.section {
+  margin-top: 16px;
+}
+
+.divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+  margin-top: 16px;
+}
+
+.ui-lang-dropdown {
+  position: relative;
+}
+
+.ui-lang-selected {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #e4e4f0;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.15s;
+  text-align: left;
+}
+
+.ui-lang-selected::after {
+  content: '▾';
+  margin-left: auto;
+  color: #6a6a80;
+  font-size: 12px;
+}
+
+.ui-lang-selected:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.ui-lang-dropdown.open .ui-lang-selected {
+  border-color: #7c6ef0;
+}
+
+.ui-lang-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  background: #1e1e2e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  padding: 4px;
+}
+
+.ui-lang-dropdown.open .ui-lang-menu {
+  display: block;
+}
+
+.ui-lang-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #9494b0;
+  transition: all 0.1s;
+}
+
+.ui-lang-option:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #e4e4f0;
+}
+
+.ui-lang-option.active {
+  background: rgba(124, 110, 240, 0.12);
+  color: #a89cf8;
+}
+
+.ui-lang-menu::-webkit-scrollbar {
+  width: 4px;
+}
+
+.ui-lang-menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ui-lang-menu::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+}
+
+.section-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #9494b0;
+  margin-bottom: 10px;
+}
+
+.search-box {
+  margin-bottom: 10px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #e4e4f0;
+  font-size: 13px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search-box input:focus {
+  border-color: #7c6ef0;
+}
+
+.search-box input::placeholder {
+  color: #6a6a80;
+}
+
+.lang-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  max-height: 260px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.lang-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-size: 13px;
+}
+
+.lang-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.lang-item.active {
+  background: rgba(124, 110, 240, 0.12);
+  border-color: rgba(124, 110, 240, 0.3);
+  color: #a89cf8;
+}
+
+.lang-flag {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.lang-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lang-code {
+  margin-left: auto;
+  font-size: 10px;
+  color: #6a6a80;
+  font-weight: 500;
+}
+
+.status {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 12px;
+  color: #7c6ef0;
+  min-height: 18px;
+  transition: opacity 0.2s;
+}
+
+.lang-grid::-webkit-scrollbar {
+  width: 4px;
+}
+
+.lang-grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.lang-grid::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+}

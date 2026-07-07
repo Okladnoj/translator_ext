@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup">
+    <div class="header">
+      <img src="../icons/icon48.png" class="logo" alt="">
+      <div class="header-text">
+        <h1 id="ext-name"></h1>
+      </div>
+    </div>
+
+    <div class="section">
+      <label class="section-label" id="ui-lang-label"></label>
+      <div class="ui-lang-dropdown" id="ui-lang-dropdown">
+        <button class="ui-lang-selected" id="ui-lang-selected"></button>
+        <div class="ui-lang-menu" id="ui-lang-menu"></div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+      <label class="section-label" id="target-lang-label"></label>
+      <div class="search-box">
+        <input type="text" id="lang-search" autocomplete="off">
+      </div>
+      <div class="lang-grid" id="lang-grid"></div>
+    </div>
+
+    <div class="status" id="status"></div>
+  </div>
+
+  <script src="../src/i18n.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

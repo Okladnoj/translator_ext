@@ -1,0 +1,145 @@
+:root {
+  --qt-font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --qt-bg: #1e1e2e;
+  --qt-surface: #282840;
+  --qt-text: #e4e4f0;
+  --qt-text-muted: #9494b0;
+  --qt-accent: #7c6ef0;
+  --qt-accent-hover: #9488f8;
+  --qt-border: rgba(255, 255, 255, 0.08);
+  --qt-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), 0 2px 8px rgba(0, 0, 0, 0.3);
+  --qt-radius: 12px;
+  --qt-radius-sm: 8px;
+  --qt-transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Trigger button */
+
+.qt-bubble {
+  position: absolute;
+  z-index: 2147483647;
+  font-family: var(--qt-font);
+  animation: qt-fade-in 0.15s ease-out;
+}
+
+.qt-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--qt-border);
+  border-radius: 50%;
+  background: var(--qt-bg);
+  box-shadow: var(--qt-shadow);
+  cursor: pointer;
+  transition: all var(--qt-transition);
+  color: var(--qt-text);
+}
+
+.qt-trigger:hover {
+  background: var(--qt-accent);
+  border-color: var(--qt-accent);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(124, 110, 240, 0.4), var(--qt-shadow);
+}
+
+.qt-trigger svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  pointer-events: none;
+}
+
+/* In-place translated elements */
+
+.qt-translating {
+  opacity: 0.5;
+  transition: opacity var(--qt-transition);
+}
+
+.qt-translated {
+  background: rgba(124, 110, 240, 0.08);
+  border-radius: 2px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  transition: background var(--qt-transition);
+}
+
+/* Undo bar */
+
+.qt-undo-bar {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2147483647;
+  font-family: var(--qt-font);
+  animation: qt-slide-up 0.25s ease-out;
+}
+
+.qt-undo-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 20px;
+  background: var(--qt-bg);
+  border: 1px solid var(--qt-border);
+  border-radius: 100px;
+  box-shadow: var(--qt-shadow);
+  color: var(--qt-text);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.qt-undo-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 14px;
+  border: 1px solid var(--qt-accent);
+  border-radius: 100px;
+  background: rgba(124, 110, 240, 0.15);
+  color: var(--qt-accent);
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--qt-font);
+  cursor: pointer;
+  transition: all var(--qt-transition);
+}
+
+.qt-undo-btn:hover {
+  background: var(--qt-accent);
+  color: white;
+}
+
+.qt-undo-btn svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+
+/* Spinner */
+
+.qt-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--qt-border);
+  border-top-color: var(--qt-accent);
+  border-radius: 50%;
+  animation: qt-spin 0.6s linear infinite;
+}
+
+@keyframes qt-fade-in {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes qt-slide-up {
+  from { opacity: 0; transform: translateX(-50%) translateY(12px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+@keyframes qt-spin {
+  to { transform: rotate(360deg); }
+}
