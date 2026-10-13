@@ -92,6 +92,11 @@
   white-space: nowrap;
 }
 
+.qt-error-bar .qt-undo-content {
+  border-color: rgba(240, 110, 110, 0.5);
+  color: #f5a5a5;
+}
+
 .qt-undo-btn {
   display: flex;
   align-items: center;

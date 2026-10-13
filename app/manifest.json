@@ -2,12 +2,15 @@
   "manifest_version": 3,
   "name": "__MSG_extName__",
   "description": "__MSG_extDescription__",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "default_locale": "en",
   "permissions": ["storage"],
   "host_permissions": [
     "https://translate.googleapis.com/*"
   ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
   "action": {
     "default_popup": "popup/popup.html",
     "default_icon": {
@@ -19,7 +22,7 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["src/i18n.js", "src/providers/google.js", "src/translator.js", "src/content.js"],
+      "js": ["src/i18n.js", "src/messages.js", "src/translator.js", "src/content.js"],
       "css": ["src/styles/popup.css"]
     }
   ],

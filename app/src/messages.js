@@ -1,0 +1,3 @@
+const MessageType = {
+  translate: 'translate',
+};

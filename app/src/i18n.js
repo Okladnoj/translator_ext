@@ -23,6 +23,8 @@ const I18N_STRINGS = {
     translatedCount: 'Translated $1 elements',
     undoButton: 'Undo',
     translateTooltip: 'Translate selection',
+    translationError: 'Translation service is unavailable. Try again later.',
+    extensionReloaded: 'Extension was updated. Reload the page.',
   },
   ru: {
     flag: '🇷🇺',
@@ -36,6 +38,8 @@ const I18N_STRINGS = {
     translatedCount: 'Переведено $1 элементов',
     undoButton: 'Отменить',
     translateTooltip: 'Перевести выделенное',
+    translationError: 'Сервис перевода недоступен. Попробуйте позже.',
+    extensionReloaded: 'Расширение обновилось. Перезагрузите страницу.',
   },
   uk: {
     flag: '🇺🇦',
@@ -49,6 +53,8 @@ const I18N_STRINGS = {
     translatedCount: 'Перекладено $1 елементів',
     undoButton: 'Скасувати',
     translateTooltip: 'Перекласти виділене',
+    translationError: 'Сервіс перекладу недоступний. Спробуйте пізніше.',
+    extensionReloaded: 'Розширення оновилося. Перезавантажте сторінку.',
   },
   de: {
     flag: '🇩🇪',
@@ -62,6 +68,8 @@ const I18N_STRINGS = {
     translatedCount: '$1 Elemente übersetzt',
     undoButton: 'Rückgängig',
     translateTooltip: 'Auswahl übersetzen',
+    translationError: 'Übersetzungsdienst nicht verfügbar. Bitte später erneut versuchen.',
+    extensionReloaded: 'Erweiterung wurde aktualisiert. Seite neu laden.',
   },
   fr: {
     flag: '🇫🇷',
@@ -75,6 +83,8 @@ const I18N_STRINGS = {
     translatedCount: '$1 éléments traduits',
     undoButton: 'Annuler',
     translateTooltip: 'Traduire la sélection',
+    translationError: 'Service de traduction indisponible. Réessayez plus tard.',
+    extensionReloaded: "L'extension a été mise à jour. Rechargez la page.",
   },
   es: {
     flag: '🇪🇸',
@@ -88,6 +98,8 @@ const I18N_STRINGS = {
     translatedCount: '$1 elementos traducidos',
     undoButton: 'Deshacer',
     translateTooltip: 'Traducir selección',
+    translationError: 'Servicio de traducción no disponible. Inténtalo más tarde.',
+    extensionReloaded: 'La extensión se actualizó. Recarga la página.',
   },
   it: {
     flag: '🇮🇹',
@@ -101,6 +113,8 @@ const I18N_STRINGS = {
     translatedCount: '$1 elementi tradotti',
     undoButton: 'Annulla',
     translateTooltip: 'Traduci selezione',
+    translationError: 'Servizio di traduzione non disponibile. Riprova più tardi.',
+    extensionReloaded: "L'estensione è stata aggiornata. Ricarica la pagina.",
   },
   pt: {
     flag: '🇵🇹',
@@ -114,6 +128,8 @@ const I18N_STRINGS = {
     translatedCount: '$1 elementos traduzidos',
     undoButton: 'Desfazer',
     translateTooltip: 'Traduzir seleção',
+    translationError: 'Serviço de tradução indisponível. Tente novamente mais tarde.',
+    extensionReloaded: 'A extensão foi atualizada. Recarregue a página.',
   },
   pl: {
     flag: '🇵🇱',
@@ -127,6 +143,8 @@ const I18N_STRINGS = {
     translatedCount: 'Przetłumaczono $1 elementów',
     undoButton: 'Cofnij',
     translateTooltip: 'Przetłumacz zaznaczenie',
+    translationError: 'Usługa tłumaczenia jest niedostępna. Spróbuj później.',
+    extensionReloaded: 'Rozszerzenie zostało zaktualizowane. Odśwież stronę.',
   },
   nl: {
     flag: '🇳🇱',
@@ -140,6 +158,8 @@ const I18N_STRINGS = {
     translatedCount: '$1 elementen vertaald',
     undoButton: 'Ongedaan maken',
     translateTooltip: 'Selectie vertalen',
+    translationError: 'Vertaaldienst niet beschikbaar. Probeer het later opnieuw.',
+    extensionReloaded: 'De extensie is bijgewerkt. Herlaad de pagina.',
   },
   tr: {
     flag: '🇹🇷',
@@ -153,6 +173,8 @@ const I18N_STRINGS = {
     translatedCount: '$1 öğe çevrildi',
     undoButton: 'Geri al',
     translateTooltip: 'Seçimi çevir',
+    translationError: 'Çeviri hizmeti kullanılamıyor. Daha sonra tekrar deneyin.',
+    extensionReloaded: 'Uzantı güncellendi. Sayfayı yenileyin.',
   },
   zh: {
     flag: '🇨🇳',
@@ -166,6 +188,8 @@ const I18N_STRINGS = {
     translatedCount: '已翻译 $1 个元素',
     undoButton: '撤销',
     translateTooltip: '翻译选中内容',
+    translationError: '翻译服务不可用，请稍后再试。',
+    extensionReloaded: '扩展已更新，请刷新页面。',
   },
   ja: {
     flag: '🇯🇵',
@@ -179,6 +203,8 @@ const I18N_STRINGS = {
     translatedCount: '$1 要素を翻訳済み',
     undoButton: '元に戻す',
     translateTooltip: '選択範囲を翻訳',
+    translationError: '翻訳サービスを利用できません。後でもう一度お試しください。',
+    extensionReloaded: '拡張機能が更新されました。ページを再読み込みしてください。',
   },
   ko: {
     flag: '🇰🇷',
@@ -192,6 +218,8 @@ const I18N_STRINGS = {
     translatedCount: '$1개 요소 번역 완료',
     undoButton: '실행 취소',
     translateTooltip: '선택 항목 번역',
+    translationError: '번역 서비스를 사용할 수 없습니다. 나중에 다시 시도하세요.',
+    extensionReloaded: '확장 프로그램이 업데이트되었습니다. 페이지를 새로고침하세요.',
   },
   ar: {
     flag: '🇸🇦',
@@ -205,6 +233,8 @@ const I18N_STRINGS = {
     translatedCount: 'تمت ترجمة $1 عنصر',
     undoButton: 'تراجع',
     translateTooltip: 'ترجمة التحديد',
+    translationError: 'خدمة الترجمة غير متاحة. حاول مرة أخرى لاحقًا.',
+    extensionReloaded: 'تم تحديث الإضافة. أعد تحميل الصفحة.',
   },
   hi: {
     flag: '🇮🇳',
@@ -218,6 +248,8 @@ const I18N_STRINGS = {
     translatedCount: '$1 तत्वों का अनुवाद हो गया',
     undoButton: 'पूर्ववत करें',
     translateTooltip: 'चयन का अनुवाद करें',
+    translationError: 'अनुवाद सेवा उपलब्ध नहीं है। बाद में पुनः प्रयास करें।',
+    extensionReloaded: 'एक्सटेंशन अपडेट हो गया है। पेज रीलोड करें।',
   },
   cs: {
     flag: '🇨🇿',
@@ -231,6 +263,8 @@ const I18N_STRINGS = {
     translatedCount: 'Přeloženo $1 prvků',
     undoButton: 'Zpět',
     translateTooltip: 'Přeložit výběr',
+    translationError: 'Překladová služba není dostupná. Zkuste to později.',
+    extensionReloaded: 'Rozšíření bylo aktualizováno. Obnovte stránku.',
   },
   sv: {
     flag: '🇸🇪',
@@ -244,6 +278,8 @@ const I18N_STRINGS = {
     translatedCount: '$1 element översatta',
     undoButton: 'Ångra',
     translateTooltip: 'Översätt markering',
+    translationError: 'Översättningstjänsten är inte tillgänglig. Försök igen senare.',
+    extensionReloaded: 'Tillägget har uppdaterats. Ladda om sidan.',
   },
   da: {
     flag: '🇩🇰',
@@ -257,6 +293,8 @@ const I18N_STRINGS = {
     translatedCount: '$1 elementer oversat',
     undoButton: 'Fortryd',
     translateTooltip: 'Oversæt markering',
+    translationError: 'Oversættelsestjenesten er ikke tilgængelig. Prøv igen senere.',
+    extensionReloaded: 'Udvidelsen er blevet opdateret. Genindlæs siden.',
   },
   fi: {
     flag: '🇫🇮',
@@ -270,6 +308,8 @@ const I18N_STRINGS = {
     translatedCount: '$1 elementtiä käännetty',
     undoButton: 'Kumoa',
     translateTooltip: 'Käännä valinta',
+    translationError: 'Käännöspalvelu ei ole käytettävissä. Yritä myöhemmin uudelleen.',
+    extensionReloaded: 'Laajennus päivitettiin. Lataa sivu uudelleen.',
   },
   el: {
     flag: '🇬🇷',
@@ -283,6 +323,8 @@ const I18N_STRINGS = {
     translatedCount: '$1 στοιχεία μεταφράστηκαν',
     undoButton: 'Αναίρεση',
     translateTooltip: 'Μετάφραση επιλογής',
+    translationError: 'Η υπηρεσία μετάφρασης δεν είναι διαθέσιμη. Δοκιμάστε ξανά αργότερα.',
+    extensionReloaded: 'Η επέκταση ενημερώθηκε. Φορτώστε ξανά τη σελίδα.',
   },
   he: {
     flag: '🇮🇱',
@@ -296,6 +338,8 @@ const I18N_STRINGS = {
     translatedCount: '$1 אלמנטים תורגמו',
     undoButton: 'ביטול',
     translateTooltip: 'תרגם בחירה',
+    translationError: 'שירות התרגום אינו זמין. נסו שוב מאוחר יותר.',
+    extensionReloaded: 'התוסף עודכן. טענו מחדש את הדף.',
   },
   th: {
     flag: '🇹🇭',
@@ -309,6 +353,8 @@ const I18N_STRINGS = {
     translatedCount: 'แปลแล้ว $1 รายการ',
     undoButton: 'เลิกทำ',
     translateTooltip: 'แปลข้อความที่เลือก',
+    translationError: 'บริการแปลไม่พร้อมใช้งาน โปรดลองอีกครั้งในภายหลัง',
+    extensionReloaded: 'ส่วนขยายได้รับการอัปเดตแล้ว โปรดโหลดหน้าใหม่',
   },
   vi: {
     flag: '🇻🇳',
@@ -322,6 +368,8 @@ const I18N_STRINGS = {
     translatedCount: 'Đã dịch $1 phần tử',
     undoButton: 'Hoàn tác',
     translateTooltip: 'Dịch vùng chọn',
+    translationError: 'Dịch vụ dịch không khả dụng. Vui lòng thử lại sau.',
+    extensionReloaded: 'Tiện ích đã được cập nhật. Vui lòng tải lại trang.',
   },
 };
 

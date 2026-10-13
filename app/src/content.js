@@ -4,6 +4,8 @@
     undo: `<svg viewBox="0 0 24 24"><path d="M12.5 8c-2.65 0-5.05 1.04-6.83 2.73L2.5 7.7V16h8.3l-3.07-3.07A7.09 7.09 0 0 1 12.5 11c3.22 0 5.98 2.09 6.93 5l2.22-.74A9.47 9.47 0 0 0 12.5 8z"/></svg>`,
   };
 
+  const ERROR_BAR_DURATION_MS = 4000;
+
   let activeBubble = null;
   let translationState = null;
 
@@ -172,9 +174,32 @@
       showUndoBar(entries.length, false);
     } catch (error) {
       restoreOriginals(entries);
-      removeUndoBar();
+      showErrorBar(resolveErrorMessageKey());
       console.error('Translation failed:', error);
     }
+  }
+
+  function resolveErrorMessageKey() {
+    if (!chrome.runtime?.id) {
+      return 'extensionReloaded';
+    }
+
+    return 'translationError';
+  }
+
+  function showErrorBar(messageKey) {
+    removeUndoBar();
+
+    const bar = document.createElement('div');
+    bar.className = 'qt-undo-bar qt-error-bar';
+    bar.innerHTML = `
+      <div class="qt-undo-content">
+        <span>${i18n(messageKey)}</span>
+      </div>
+    `;
+
+    document.body.appendChild(bar);
+    setTimeout(() => bar.remove(), ERROR_BAR_DURATION_MS);
   }
 
   function restoreOriginals(entries) {

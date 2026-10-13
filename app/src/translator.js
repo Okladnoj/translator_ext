@@ -1,5 +1,4 @@
 const Translator = (() => {
-  let _provider = GoogleTranslateProvider;
   let _targetLang = 'ru';
 
   chrome.storage.local.get({ targetLang: 'ru' }, (result) => {
@@ -13,20 +12,22 @@ const Translator = (() => {
   });
 
   return {
-    setProvider(provider) {
-      _provider = provider;
-    },
-
-    getProvider() {
-      return _provider;
-    },
-
     getTargetLanguage() {
       return _targetLang;
     },
 
     async translate(text) {
-      return _provider.translate(text, _targetLang);
+      const response = await chrome.runtime.sendMessage({
+        type: MessageType.translate,
+        text,
+        targetLang: _targetLang,
+      });
+
+      if (!response?.ok) {
+        throw new Error(response?.error ?? 'No response from background worker');
+      }
+
+      return response.result;
     },
   };
 })();
